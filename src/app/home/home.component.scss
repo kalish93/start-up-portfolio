@@ -1,0 +1,171 @@
+// .toolbar {
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 0 24px;
+//   color: white;
+//   height: 12%;
+// }
+
+// .spacer {
+//   flex: 1;
+// }
+
+// .content {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 24px;
+//   padding-top: 10rem;
+
+//   text-align: left;
+//   background-color: #E0E0E0;
+// }
+
+// .illustration {
+//   max-width: 40%;
+//   margin-right: 50px;
+// }
+
+// .text-content {
+//   max-width: 600px;
+// }
+
+// .text-content h1 {
+//   font-size: 2rem;
+//   margin-bottom: 16px;
+// }
+
+// .text-content p {
+//   font-size: 1.1rem;
+//   margin-bottom: 24px;
+//   text-align: justify;
+// }
+
+// button {
+//   font-size: 1rem;
+//   color: white;
+// }
+
+// .nav-link{
+//   color: white;
+//   text-decoration: none;
+// }
+
+// .nav-links{
+//   margin-right: 5rem;
+//   display: flex;
+//   gap: 3rem;
+//   font-weight: 100;
+//   font-size:medium;
+// }
+
+// .contact-us-btn{
+//   color: white;
+//   background-color: #2F2E41;
+//   padding: .5rem 1rem;
+//   border-radius: .5rem;
+//   border: none;
+//   margin-left: 0 auto;
+// }
+
+// .contact-us {
+//   display: flex;
+//   align-items: flex-end;
+//   justify-content: flex-end;
+// }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  color: white;
+  height: 12%;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  padding-top: 10rem;
+  position: relative; /* Required for the pseudo-element to position correctly */
+  text-align: left;
+  background-color: #E0E0E0;
+  overflow: hidden; /* Ensure the zigzag border doesn't overflow */
+}
+
+.illustration {
+  max-width: 40%;
+  margin-right: 50px;
+}
+
+.text-content {
+  max-width: 600px;
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+button {
+  font-size: 1rem;
+  color: white;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  margin-right: 5rem;
+  display: flex;
+  gap: 3rem;
+  font-weight: 100;
+  font-size: medium;
+}
+
+.contact-us-btn {
+  color: white;
+  background-color: #2F2E41;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  border: none;
+  margin-left: 0 auto;
+}
+
+.contact-us {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/* Sine wave bottom border effect */
+.content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px; /* Adjust height for desired thickness */
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 10"%3E%3Cpath fill="none" stroke="%23333" stroke-width="2" d="M0 5 Q 10 0, 20 5 T 40 5 T 60 5 T 80 5 T 100 5 V 10 H 0 Z"/%3E%3C/svg%3E') repeat-x;
+  background-size: 100px 40px; /* Adjust according to the SVG width and height */
+  z-index: -1; /* Places the zigzag behind the content */
+}
