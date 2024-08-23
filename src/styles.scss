@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+
+// // Custom Theming for Angular Material
+// // For more information: https://material.angular.io/guide/theming
+// @use '@angular/material' as mat;
+// // Plus imports for other components in your app.
+
+// // Include the common styles for Angular Material. We include this here so that you only
+// // have to load a single css file for Angular Material in your app.
+// // Be sure that you only ever include this mixin once!
+// @include mat.core();
+
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+// $start-up-portfolio-primary: mat.define-palette(mat.$indigo-palette);
+// $start-up-portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// // The warn palette is optional (defaults to red).
+// $start-up-portfolio-warn: mat.define-palette(mat.$red-palette);
+
+// // Create the theme object. A theme consists of configurations for individual
+// // theming systems such as "color" or "typography".
+// $start-up-portfolio-theme: mat.define-light-theme((
+//   color: (
+//     primary: $start-up-portfolio-primary,
+//     accent: $start-up-portfolio-accent,
+//     warn: $start-up-portfolio-warn,
+//   ),
+//   typography: mat.define-typography-config(),
+//   density: 0
+// ));
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+// @include mat.all-component-themes($start-up-portfolio-theme);
+
+// /* You can add global styles to this file, and also import other style files */
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@use '@angular/material' as mat;
+
+// Include the common styles for Angular Material
+@include mat.core();
+
+// Define a custom color palette with #2F2E41 as the primary color
+$custom-primary: mat.define-palette(
+  (
+    500: #2F2E41, // Define the default shade
+    600: #292838, // Slightly darker shade
+    700: #242230, // Darker shade
+    contrast: (
+      500: #ffffff, // Text color for contrast
+    )
+  )
+);
+
+// Define the accent and warn palettes
+$start-up-portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$start-up-portfolio-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object using your custom primary palette
+$start-up-portfolio-theme: mat.define-light-theme((
+  color: (
+    primary: $custom-primary,
+    accent: $start-up-portfolio-accent,
+    warn: $start-up-portfolio-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Include the theme styles for all components
+@include mat.all-component-themes($start-up-portfolio-theme);
+
+// Global styles
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
