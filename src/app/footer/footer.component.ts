@@ -3,12 +3,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-services',
+  selector: 'app-footer',
   standalone: true,
   imports: [MatCardModule, MatIconModule],
-  templateUrl: './services.component.html',
-  styleUrl: './services.component.scss'
+  templateUrl: './footer.component.html',
+  styleUrl: './footer.component.scss'
 })
-export class ServicesComponent {
-
+export class FooterComponent {
+  currentYear = new Date().getFullYear();
 }

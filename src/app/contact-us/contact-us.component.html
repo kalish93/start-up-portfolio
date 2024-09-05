@@ -1,0 +1,56 @@
+<!-- contact-us.component.html -->
+<div class="contact-us-container">
+  <h1>Contact Us</h1>
+  <div class="contact-us-content">
+    <div class="contact-form">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Get in Touch</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <form (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" required />
+              <!-- <mat-error *ngIf="contactForm.get('name').hasError('required')">Name is required.</mat-error> -->
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" type="email" required />
+              <!-- <mat-error *ngIf="contactForm.get('email').hasError('required')">Email is required.</mat-error>
+              <mat-error *ngIf="contactForm.get('email').hasError('email')">Enter a valid email address.</mat-error> -->
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Subject</mat-label>
+              <input matInput formControlName="subject" required />
+              <!-- <mat-error *ngIf="contactForm.get('subject').hasError('required')">Subject is required.</mat-error> -->
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Message</mat-label>
+              <textarea matInput formControlName="message" rows="4" required></textarea>
+              <!-- <mat-error *ngIf="contactForm.get('message').hasError('required')">Message is required.</mat-error> -->
+            </mat-form-field>
+
+            <button class="submit-btn" type="submit">Send Message</button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="contact-info">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Contact Information</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p><mat-icon>phone</mat-icon> <strong>Phone:</strong> +123 456 7890</p>
+          <p><mat-icon>email</mat-icon> <strong>Email:</strong> contactyourcompany.com</p>
+          <p><mat-icon>location_on</mat-icon> <strong>Address:</strong> 123 Your Street, Your City, Your Country</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
