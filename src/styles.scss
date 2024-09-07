@@ -79,5 +79,5 @@ $start-up-portfolio-theme: mat.define-light-theme((
 @include mat.all-component-themes($start-up-portfolio-theme);
 
 // Global styles
-html, body { height: 100%; width: fit-content; }
+html, body { width: fit-content; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

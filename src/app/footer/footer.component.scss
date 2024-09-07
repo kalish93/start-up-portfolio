@@ -1,17 +1,25 @@
+.illustration {
+  height: 100px;
+  width: min-content;
+}
+.social-icon{
+  width: 40px;
+}
 .footer-container {
   background-color: #003366;
   color: #fff;
   padding: 2rem 0;
   text-align: center;
-
   .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     gap: 2rem;
     padding: 2rem 0;
 
     .footer-section {
+      padding: 1rem;
       max-width: 250px;
       text-align: left;
 
@@ -46,7 +54,7 @@
         font-size: 1.5rem;
         transition: color 0.3s ease;
         &:hover {
-          color: #fff;
+          color: #41a0ff;
         }
       }
     }
@@ -63,13 +71,14 @@
 }
 
 @media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
+
+  .footer-container{
+    flex-direction: row-reverse;
   }
 
   .footer-section {
     text-align: center;
+    max-width: min-content;
+    display: inline-block;
   }
 }

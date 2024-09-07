@@ -88,3 +88,10 @@ mat-card-content {
   position: relative; /* Ensure it is above the pseudo-element */
   z-index: 2;
 }
+
+@media screen and (max-width: 768px) {
+ p{
+  text-align: justify;
+ }
+  
+}
