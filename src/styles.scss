@@ -47,6 +47,10 @@
 // Define a custom color palette with #2F2E41 as the primary color
 $custom-primary: mat.define-palette(
   (
+    100: #cdcdcd,
+    200: #b4b4b4,
+    300: #9b9b9b,
+    400: #828282,
     500: #2F2E41, // Define the default shade
     600: #292838, // Slightly darker shade
     700: #242230, // Darker shade
@@ -75,5 +79,5 @@ $start-up-portfolio-theme: mat.define-light-theme((
 @include mat.all-component-themes($start-up-portfolio-theme);
 
 // Global styles
-html, body { height: 100%; }
+html, body { height: 100%; width: fit-content; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

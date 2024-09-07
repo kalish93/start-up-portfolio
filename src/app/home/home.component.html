@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" class="toolbar">
+<mat-toolbar position="fixed" color="primary" class="toolbar">
   <span class="logo"> <img src="assets/image.png" alt="Coding Illustration" class="illustration">
   </span>
   <span class="spacer"></span>
@@ -8,12 +8,25 @@
     <a class="nav-link" href="#">About Us</a>
     <a class="nav-link" href="#">Contact Us</a>
   </div>
+  <button mat-icon-button class="menu" (click)="toggleDrawer()" aria-label="Example icon-button with a menu">
+  <mat-icon>menu</mat-icon>
+</button>
 </mat-toolbar>
+<mat-sidenav-container >
+  <mat-sidenav class="drawer" [opened]="isDrawerOpen" position="end" mode="over">
+    <mat-nav-list class="list-container">
+      <a mat-list-item class="menu-item" href="#">Home</a>
+      <a mat-list-item class="menu-item" href="#">Portfolio</a>
+      <a mat-list-item class="menu-item" href="#">About Us</a>
+      <a mat-list-item class="menu-item" href="#">Contact Us</a>
+    </mat-nav-list>
 
+  </mat-sidenav>
+<mat-sidenav-content>
 <div class="content">
-  <img src="assets/undraw_dev_productivity_re_fylf 1.svg" alt="Coding Illustration" class="illustration">
+  <img src="assets/undraw_dev_productivity_re_fylf 1.svg" alt="Coding Illustration" class="">
   <div class="text-content">
-    <div class="title">Your Idea Our Code.</div>
+    <div class="title">Your Success,   Our <pre class="code-text">&lt;/Code> </pre> </div>
     <p>
       At HabTech, we transform your concepts into powerful digital solutions. Our skilled team specializes in creating bespoke websites, web apps, and mobile apps tailored to your needs.
     </p>
@@ -25,5 +38,8 @@
 
 <app-services></app-services>
 <app-contact-us></app-contact-us>
-
-<app-footer></app-footer>
+<div class="footer">
+  <app-footer></app-footer>
+</div>
+</mat-sidenav-content>
+</mat-sidenav-container>
