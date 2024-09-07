@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CommonModule } from '@angular/common';
 import { MatListModule } from '@angular/material/list';
+import { PortfolioComponent } from '../portfolio/portfolio.component';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +25,7 @@ import { MatListModule } from '@angular/material/list';
     ServicesComponent,
     FooterComponent,
     ContactUsComponent,
+    PortfolioComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
